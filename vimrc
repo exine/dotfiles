@@ -90,7 +90,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-rails.git'
 Bundle 'vim-ruby/vim-ruby.git'
 Bundle 'scrooloose/nerdtree'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 
 filetype plugin indent on
 
@@ -100,3 +100,6 @@ set guifont=Inconsolata\ 11
 
 autocmd vimenter * if !argc() | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
+
+set tabstop=2
+set shiftwidth=2
