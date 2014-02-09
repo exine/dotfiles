@@ -74,6 +74,7 @@ autocmd BufReadPost *
 
 augroup END
 
+filetype plugin indent on
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
@@ -84,22 +85,49 @@ endif
 
 set number
 
+" Make vundle work
 Bundle 'gmarik/vundle'
 
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-rails.git'
-Bundle 'vim-ruby/vim-ruby.git'
+" Editor-related plugins
 Bundle 'scrooloose/nerdtree'
-Bundle 'mattn/emmet-vim'
+Bundle 'Lokaltog/vim-easymotion'
 
-filetype plugin indent on
+" VCS
+Bundle 'tpope/vim-fugitive'
+
+" Code-related plugins
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+Bundle 'mattn/emmet-vim'
+Bundle 'tpope/vim-haml'
+
+map <Leader> <Plug>(easymotion-prefix)
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+
+map <Leader>h <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>l <Plug>(easymotion-linebackward)
+
+map <C-n> :NERDTreeToggle<CR>
+
+let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
+
 
 set t_Co=256
 color grb256
 set guifont=Inconsolata\ 11
 
+" If ran without file, open NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
-map <C-n> :NERDTreeToggle<CR>
+" If NERDTree is last window, close vim
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 set tabstop=2
 set shiftwidth=2
+
+set foldmethod=syntax
+set foldlevelstart=20
