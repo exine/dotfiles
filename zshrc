@@ -24,7 +24,7 @@ EOBUNDLES
 
 #= SHELL CONFIG
 # Make vim our default editor
-export EDITOR=gvim
+export EDITOR=vim
 
 # Set NPM config so we can install packages in our $HOME.
 export NPM_PACKAGES="$HOME/.npm-packages"
