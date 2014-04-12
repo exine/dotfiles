@@ -35,7 +35,7 @@ export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:$PATH" # Core OS path. We don't need any /bin, because it's symlink to /usr/bin on arch.
 export PATH="/usr/lib/ccache/bin:$PATH" # Ccache will sit between compiler and compilations, so we don't have to recompile everything
 export PATH="$HOME/.rvm/bin:$PATH" # For rvm scripting
-export PATH="$NPM_PACKAGED/bin:$PATH" # Here we handle our NPM packages in $HOME.
+export PATH="$NPM_PACKAGES/bin:$PATH" # Here we handle our NPM packages in $HOME.
 
 #= COMPILATION FLAGS
 # Let's add some flags for compilation
