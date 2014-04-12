@@ -91,9 +91,11 @@ Bundle 'gmarik/vundle'
 " Editor-related plugins
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-markdown'
 
 " VCS
 Bundle 'tpope/vim-fugitive'
+Bundle 'phleet/vim-mercenary'
 
 " Code-related plugins
 Bundle 'vim-ruby/vim-ruby'
@@ -119,7 +121,7 @@ let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 
 set t_Co=256
 color grb256
-set guifont=Inconsolata\ 11
+set guifont=Deja\ Vu\ Sans\ Mono\ 9
 
 " If ran without file, open NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
@@ -131,3 +133,4 @@ set shiftwidth=2
 
 set foldmethod=syntax
 set foldlevelstart=20
+
