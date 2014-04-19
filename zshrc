@@ -42,7 +42,8 @@ antigen bundles <<EOBUNDLES
 	node
 	npm
 EOBUNDLES
-
+# And here we set a theme
+antigen theme arrow
 #= NO GLOBAL EXPRESSIONS LIST
 # Here we don't expand glob regexp.
 alias bower='noglob bower'
