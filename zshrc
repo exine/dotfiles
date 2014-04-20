@@ -37,6 +37,8 @@ antigen bundles <<EOBUNDLES
 	git
 	github
 	rvm
+	ruby
+	gem
 	rails
 	mercurial
 	node
