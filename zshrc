@@ -23,6 +23,7 @@ export CXXFLAGS="-march=native -mtune=native" # As above
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:$PATH" # Core OS paths
 export PATH="/usr/lib/ccache/bin:$PATH" # Ccache will sit between compiler and compilations, so we don't have to recompile everything
 export PATH="$NPM_PACKAGES/bin:$PATH" # Here we handle our NPM packages in $HOME.
+export PATH="$HOME/.bin:$PATH" # For our scripting
 export PATH="$HOME/.rvm/bin:$PATH" # For rvm scripting
 #= INCLUDES
 # Let's include everything here ASAP
