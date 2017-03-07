@@ -1,0 +1,15 @@
+[alias]
+        lol = log --graph --decorate --pretty=oneline --abbrev-commit
+        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	st = status
+	staged = diff --staged
+[color]
+        branch = auto
+        diff = auto
+        interactive = auto
+        status = auto
+[user]
+	name = Marcin Piotr Merda
+	email = marcin.merda@codete.co
+[push]
+	default = simple
